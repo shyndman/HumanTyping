@@ -53,6 +53,13 @@ TIME_UPPERCASE_PENALTY = 0.2
 TIME_SPACE_PAUSE_MEAN = 0.25
 TIME_SPACE_PAUSE_STD = 0.05
 
+# Dwell time: key hold duration (keydown->keyup), in seconds. Playwright only;
+# Selenium/Appium send_keys cannot control it. Detectors read dwell as much as
+# inter-key timing, so a real nonzero hold matters.
+TIME_DWELL_MEAN = 0.09
+TIME_DWELL_STD = 0.025
+MIN_DWELL_TIME = 0.03
+
 # Fatigue
 FATIGUE_FACTOR = 1.0005
 FATIGUE_CAP = 1.5  # Maximum fatigue multiplier
